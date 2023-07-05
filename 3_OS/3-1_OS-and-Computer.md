@@ -14,7 +14,7 @@
 
 # Computer Program
 - A sequence or set of insturctions in a programming language for a computer to execute
-- One component of software, which also includes documentation and other intantible components
+- One component of software, which also includes documentation and other intangible components
 
 # Firmware
 - Specific class of computer software
@@ -123,4 +123,5 @@
 - H/W, S/W 인터럽트로 나누어짐
 
 # DMA Controller
-- TBC...
+- I/O 디바이스가 메모리에 직접 접근할 수 있도록 하는 하드웨어
+- CPU에 들어오는 인터럽트 요청의 과부하를 방지하기 위함
