@@ -4,7 +4,7 @@
 
 ## Contributors
 - [Yi Hong-ju](https://github.com/yi-hongju)
-- [Park Jung-jae](https://github.com/jeongjae96)
+- [Park Jung-jae, aka. JJ](https://github.com/jeongjae96)
 
 ## Study Members
 - [Lim Do-yeon](https://github.com/Do-racoon)
