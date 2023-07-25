@@ -52,6 +52,12 @@ ERD의 테이블 필드, 타입은 생략.
 
 ![image](https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/1a011add-ce91-40d3-b5fb-73a1e0a81563)
 
+- 첫 번째 테이블과 같이 구성한 경우, 'DS특강'을 수강신청한 사람을 찾는데 까다로움이 생길 수 있다.
+  - WHERE 수강명 = 'DS특강' 사용 불가
+  - WHERE 프로그램 LIKE '%DS특강%'과 같이 사용해야 한다. 성능 저하가 있을 수도 있다.
+- 수강명 수정에 있어서도 어려움이 있을 수 있다.
+- 그래서 제1정규화를 통해 '한 칸엔 하나의 데이터만'
+
 ### 제2정규형
 
 - 릴레이션이 제1정규형이며 부분 함수의 종속성을 제거한 형태를 말한다.
@@ -61,6 +67,22 @@ ERD의 테이블 필드, 타입은 생략.
 
 - 기본키인 {유저ID, 수강명}과 완전 종속된 유저본호 릴레이션과 '{유저ID, 수강명}에 따른 성취도' 릴레이션으로 분리된 것을 볼 수 있다.
 - 릴레이션을 분해할 때 동등한 릴레이션으로 분해해야 하고, 정보 손실이 발생하지 않는 무손실 분해로 분해되어야 한다는 것이다.
+
+<img width="640" alt="image" src="https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/484de5cc-d3df-4571-b35e-14f0ab60d548">
+
+- 헬스 가격이 7000원으로 변경된다면, 다 수정되어야 한다.
+- 데이터가 많을수록 수정하는데 오래 걸릴 것이다.
+
+<img width="640" alt="image" src="https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/1e682936-2737-4f8e-8865-be9bdf5ea638">
+
+<img width="1024" alt="image" src="https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/84db2e53-7f35-4d88-9e13-9a00987af3c5">
+
+- 제2정규화: 현재 테이블의 주제와 관련없는 컬럼을 다른 테이블로 빼는 작업
+- 제2정규형: partial dependency를 제거한 테이블
+
+partial dependency: 하나의 composite primary key에 종속
+
+<img width="800" alt="image" src="https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/ef2f7774-f076-4e3b-9ac4-d2defafd639f">
 
 ### 제3정규형
 
@@ -73,6 +95,15 @@ ERD의 테이블 필드, 타입은 생략.
 ![image](https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/c48a976a-87e7-46a0-9ed6-c32e7c5431c4)
 
 ![image](https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/11d8a84a-0334-4984-ac67-8b1531f30e2f)
+
+<img width="1024" alt="image" src="https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/1e1a16ae-a69d-4fcc-bc90-03f3e9e2e1d1">
+
+- '출신대학' 컬럼은 프라이머리 키인 '프로그램'과 전혀 상관 없다. '강사' 컬럼에만 종속.
+- 제3정규화: 일반 컬럼에만 종속된 컬럼은 다른 테이블로 빼기
+
+<img width="1024" alt="image" src="https://github.com/yi-hongju/CS-for-Jobs/assets/44770369/67099bcf-96a1-41b1-8d43-23139ee1c264">
+
+[코딩애플 - 데이터 정규화가 뭔지 설명해보세요 (개발면접타임)](https://www.youtube.com/watch?v=Y1FbowQRcmI)
 
 ### 보이스/코드 정규형
 
